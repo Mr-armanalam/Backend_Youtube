@@ -15,4 +15,16 @@ app.use(express.static("public")) //for static file use
 app.use(cookieParser()) //for reading/deleting a cookies by server only
 
 
+// routes import
+
+import userRouter from './routes/user.routes.js'
+
+
+
+
+//routes declaration
+app.use("/api/v1/users",userRouter)
+
+
+//http://localhost:8000/api/v1/users/register
 export {app}
